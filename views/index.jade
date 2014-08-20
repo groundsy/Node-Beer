@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  h1= title
+
+  // Wrapper
+  #wrapper
+      // BEER INFO
+      #beerInfo
+          h2 Beer info
+          p
+              strong Name:
+              | <span id='beerInfoName'></span>
+              br
+              strong Brewed By:
+              | <span id='beerInfoBrewedBy'></span>
+              br
+              strong Location:
+              | <span id='beerInfoBrewedLocation'></span>
+              br
+              strong Style:
+              | <span id='beerInfoStyle'></span>
+              br
+              strong ABV:
+              | <span id='beerInfoABV'></span>
+              br
+              strong IBU:
+              | <span id='beerInfoIBU'></span>
+              br
+              strong Rating:
+              | <span id='beerInfoRating'></span>
+              br
+      // /BEER INFO
+
+      // BEER LIST
+      h2 Beer list
+      #beerList
+          table
+              thead
+                  th Beer Name
+                  th Style
+                  th Rating
+                  th Modify
+              tbody
+      // /BEER LIST
+
+      // ADD BEER
+      #addBeerPanel
+        h2 Add new beer
+        #addBeer
+          fieldset
+            input#inputBeerName(type='text', placeholder='Beer name')
+            input#inputBeerStyle(type='text', placeholder='Beer style')
+            br
+            input#inputBeerBrewedBy(type='text', placeholder='Brewed by')
+            input#inputBeerBrewedLocation(type='text', placeholder='Brewery location')
+            br
+            input#inputBeerABV(type='text', placeholder='ABV (%)')
+            input#inputBeerIBU(type='text', placeholder='IBU')
+            br
+            input#inputBeerRating(type='text', placeholder='Rating e.g. 8/10')
+            br
+            button#btnAddBeer Add Beer
+      // /ADD BEER
+      // UPDATE BEER
+      #updateBeerPanel
+        h2  Update beer
+        #updateBeer
+          fieldset
+            input#updateBeerName(type='text', placeholder='Beer name', name='beerName')
+            input#updateBeerStyle(type='text', placeholder='Beer style', name='style')
+            br
+            input#updateBeerBrewedBy(type='text', placeholder='Brewed by', name='brewedBy')
+            input#updateBeerBrewedLocation(type='text', placeholder='Brewery location', name='brewedLocation')
+            br
+            input#updateBeerABV(type='text', placeholder='ABV (%)', name='abv')
+            input#updateBeerIBU(type='text', placeholder='IBU', name='ibu')
+            br
+            input#updateBeerRating(type='text', placeholder='Rating e.g. 8/10', name='rating')
+            br
+            button#btnUpdateBeer Update Beer
+            button#btnCancelUpdateBeer Cancel
+      // /UPDATE BEER
+// /WRAPPER
+
